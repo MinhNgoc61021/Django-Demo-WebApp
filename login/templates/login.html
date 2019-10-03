@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+	<link rel="stylesheet" href="stylesheet/form.css">
+</head>
+<body>
+	<div class="container">
+		<fieldset>
+			<legend>Thông tin cá nhân</legend>
+			<form action="post">
+				<label for="Name" class="name">Họ tên:</label>
+				<input type="text" id="Name" class="required" name="Name" >
+				<span id="Name_error" class="Baoloi"></span>
+				<br>
+
+				<label for="Address" id="name" class="name">Địa chỉ:</label>
+				<input type="text" id="Address" name="Address">
+				<br>
+
+				<label for="Male" class="name">Giới tính:</label>
+				<label class="radiocontainer">
+					<input type="radio" id="Male" value="Male" name="Sexuality" checked>   Nam
+					<span class="radiocheckmark"></span>
+				</label>
+				<label class="radiocontainer">
+					<input type="radio" id="Female" value="Female" name="Sexuality">   Nữ
+					<span class="radiocheckmark"></span>
+				</label>
+				<br>
+
+				<label for="Birthdate" class="name">Ngày sinh:</label>
+				<input type="text" id="Birthdate" class="required" name="Birthdate" placeholder="nn/tt/nnnn">
+				<span id="Birthdate_error" class="Baoloi"></span>
+				<br>
+
+				<label for="E-mail" class="name">E-mail:</label>
+				<input type="text" id="E-mail" class="required" name="E-mail">
+				<span id="E-mail_error" class="Baoloi"></span>
+				<br>
+
+				<label for="Phone-number" class="name">Điện thoại</label>
+				<input type="text" id="Phone-number" name="Phone-number">
+				<br>
+
+				<label for="English" class="name">Khóa đăng ký:</label>
+				<label class="checkcontainer">
+					<input type="checkbox" id="English" name="English">   Tiếng Anh
+					<span class="checkmark"></span>
+				</label>
+				<label class="checkcontainer">
+					<input type="checkbox" id="Quantri" name="Quantri">   Quản trị
+					<span class="checkmark"></span>
+				</label>
+				<label class="checkcontainer">
+					<input type="checkbox" id="IT" name="IT">   CNTT
+					<span class="checkmark"></span>
+				</label>
+				<br>
+
+				<label for="Username" class="name">Tên sử dụng:</label>
+				<input type="text" id="Username" class="required" name="Username">
+				<span id="Username_error" class="Baoloi"></span>
+				<br>
+
+				<label for="Password" class="name">Mật khẩu:</label>
+				<input type="password" id="Password" class="required" name="Password">
+				<span id="Password_error" class="Baoloi"></span>
+				<br>
+
+				<label for="Re-confirm-Password" class="name">Gõ lại mật khẩu:</label>
+				<input type="password" id="Re-confirm-Password" class="required" name="Re-confirm-Password">
+				<span id="Re-confirm-Password_error" class="Baoloi"></span>
+				<br>
+
+				<label for="Note" class="name">Ghi chú:</label>
+				<textarea id="Note" placeholder="Ghi chú"></textarea>
+				<br>
+
+				<label for="button" class="name">&nbsp</label>
+				<input type="button" id="Confirm" value="Ghi nhận">
+				<input type="button" id="Delete" value="Bỏ qua">
+			</form>
+		</fieldset>
+	</div>
+	<script src="script/event.js"></script>
+</body>
+</html>
