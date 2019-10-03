@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Form</title>
-	<link rel="stylesheet" href="stylesheet/form.css">
+    {% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'stylesheet/form.css' %} ">
 </head>
 <body>
 	<div class="container">
@@ -84,6 +85,6 @@
 			</form>
 		</fieldset>
 	</div>
-	<script src="script/event.js"></script>
+	<script src="{% static 'script/event.js' %}"></script>
 </body>
 </html>
