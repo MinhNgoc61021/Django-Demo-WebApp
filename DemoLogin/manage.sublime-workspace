@@ -4,8 +4,80 @@
 		"selected_items":
 		[
 			[
+				"ge",
+				"getElementsByTagName"
+			],
+			[
+				"c",
+				"checkcolor"
+			],
+			[
+				"le",
+				"let"
+			],
+			[
+				"che",
+				"checkboxall"
+			],
+			[
+				"id",
+				"id_value"
+			],
+			[
+				"oncl",
+				"onclick\tAttr"
+			],
+			[
 				"ch",
-				"checkcontainer"
+				"checkcolor"
+			],
+			[
+				"check",
+				"checkbox1"
+			],
+			[
+				"ce",
+				"checkbox3"
+			],
+			[
+				"chec",
+				"checkbox3"
+			],
+			[
+				"getE",
+				"getElementById"
+			],
+			[
+				"get",
+				"getElementsByTagName"
+			],
+			[
+				"f",
+				"function"
+			],
+			[
+				"getEme",
+				"getElementsByName"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"on",
+				"ontoggle\tAttr"
+			],
+			[
+				"checkbo",
+				"checkboxall"
+			],
+			[
+				"s",
+				"style\tAttr"
+			],
+			[
+				"b",
+				"border\tAttr"
 			],
 			[
 				"in",
@@ -28,16 +100,8 @@
 				"toLowerCase"
 			],
 			[
-				"f",
-				"first_char"
-			],
-			[
 				"con",
 				"console"
-			],
-			[
-				"le",
-				"length"
 			],
 			[
 				"l",
@@ -76,14 +140,6 @@
 				"date_array"
 			],
 			[
-				"b",
-				"birthdate_value"
-			],
-			[
-				"s",
-				"substr"
-			],
-			[
 				"pa",
 				"parseInt"
 			],
@@ -98,10 +154,6 @@
 			[
 				"co",
 				"console"
-			],
-			[
-				"on",
-				"onblur"
 			],
 			[
 				"n",
@@ -140,20 +192,12 @@
 				"value"
 			],
 			[
-				"get",
-				"getElementById"
-			],
-			[
 				"o",
 				"other_chars"
 			],
 			[
 				"val",
 				"valuate_name"
-			],
-			[
-				"c",
-				"console"
 			],
 			[
 				"N",
@@ -172,10 +216,6 @@
 				"nextKey"
 			],
 			[
-				"ge",
-				"getElementById"
-			],
-			[
 				"Name",
 				"Name"
 			],
@@ -188,18 +228,24 @@
 	"buffers":
 	[
 		{
-			"file": "settings.py",
+			"contents": "<!DOCTYPE html>\n<html>\n<head>\n\t<title>Table</title>\n\t<meta charset=\"utf-8\">\n\t<style type=\"text/css\">\n\t\ttable, tr, th, td {\n\t\t\tborder: 1px solid black;\n\t\t}\n\t</style>\n</head>\n<body>\n\t<div>\n\t\t<table>\n\t\t\t<tr style=\"background: red\">\n\t\t\t\t<th><input type=\"checkbox\" onclick=\"checkall()\" id=\"checkboxall\"></th>\n\t\t\t\t<th>Họ tên</th>\n\t\t\t\t<th>Ngày sinh</th>\n\t\t\t\t<th>Giới tính</th>\n\t\t\t</tr>\n\t\t\t<tr id=\"row1\">\n\t\t\t\t<td><input type=\"checkbox\" name=\"checkbox_check\" onclick=\"check('checkbox1', 'row1')\" id=\"checkbox1\"></td>\n\t\t\t\t<td>Hoàng Văn LOZ</td>\n\t\t\t\t<td>18/12/2099</td>\n\t\t\t\t<td>Gay</td>\n\t\t\t</tr>\n\t\t\t<tr id=\"row2\">\n\t\t\t\t<td><input type=\"checkbox\" name=\"checkbox_check\" onclick=\"check('checkbox2', 'row2')\" id=\"checkbox2\"></td>\n\t\t\t\t<td>Lâm Nguy</td>\n\t\t\t\t<td>8/10/2019</td>\n\t\t\t\t<td>Éo Phải Thằng</td>\n\t\t\t</tr>\n\t\t\t<tr id=\"row3\">\n\t\t\t\t<td><input type=\"checkbox\" name=\"checkbox_check\" onclick=\"check('checkbox3', 'row3')\" id=\"checkbox3\"></td>\n\t\t\t\t<td>Ngọc Minh</td>\n\t\t\t\t<td>18/12/1999</td>\n\t\t\t\t<td>Nam</td>\n\t\t\t</tr>\n\t\t</table>\n\t</div>\n\t<script type=\"text/javascript\">\n\t\t \tcheckboxall = document.getElementById('checkboxall');\n\t\t\tcheckbox = document.getElementsByName('checkbox_check');\n\t\t\tvar check = function(checkbox_id_value, id_value) {\n\t\t\t\tconsole.log('called');\n\t\t\t\tlet checkbox = document.getElementById(checkbox_id_value);\n\t\t\t\tlet checkcolor = document.getElementById(id_value).getElementsByTagName('TD');\n\t\t\t\tif (checkbox.checked === true) {\n\t\t\t\t\tconsole.log(checkcolor.length);\n\t\t\t\t\tfor (i = checkcolor.length - 1; i >= 0; i--) {\n\t\t\t\t\t\tcheckcolor[i].style.background = 'green';\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\tif (checkbox.checked === false) {\n\t\t\t\t\tconsole.log(checkcolor.length);\n\t\t\t\t\tfor (i = checkcolor.length - 1; i >= 0; i--) {\n\t\t\t\t\t\tcheckcolor[i].style.background = 'none';\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tfunction checkall() {\n\t\t\t\tif (checkboxall.checked === true) {\n\t\t\t\t\tcheckboxall.checked = true;\n\t\t\t\t\tfor (i = checkbox.length - 1; i >= 0; i--) {\n\t\t\t\t\t\tcheckbox[i].checked = true;\n\t\t\t\t\t\tcheckbox[i].disabled = true;\n\t\t\t\t\t\t\n\t\t\t\t\t}\n\t\t\t\t\tlet checkcolor = document.getElementsByTagName('TD');\n\t\t\t\t\tfor (i = checkcolor.length - 1; i >= 0; i--) {\n\t\t\t\t\t\t\tcheckcolor[i].style.background = 'green';\n\t\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\tif (checkboxall.checked === false) {\n\t\t\t\t\tcheckboxall.checked = false;\n\t\t\t\t\tfor (i = checkbox.length - 1; i >= 0; i--) {\n\t\t\t\t\t\tcheckbox[i].checked = false;\n\t\t\t\t\t\tcheckbox[i].disabled = false;\n\t\t\t\t\t}\n\t\t\t\t\tlet checkcolor = document.getElementsByTagName('TD');\n\t\t\t\t\tfor (i = checkcolor.length - 1; i >= 0; i--) {\n\t\t\t\t\t\t\tcheckcolor[i].style.background = 'none';\n\t\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\n\t\t\t\n\t</script>\n</body>\n</html>",
+			"file": "/C/Users/Hau_hypress/Desktop/Web 3/table.html",
+			"file_size": 2699,
+			"file_write_time": 132149768520687234,
 			"settings":
 			{
-				"buffer_size": 3190,
+				"buffer_size": 2592,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/Users/Hau_hypress/DemoLogin/manage.py",
+			"contents": "docu",
+			"file": "/C/Users/Hau_hypress/Desktop/Web 3/script.js",
+			"file_size": 0,
+			"file_write_time": 132149682405893079,
 			"settings":
 			{
-				"buffer_size": 629,
+				"buffer_size": 4,
 				"line_ending": "Windows"
 			}
 		}
@@ -234,15 +280,11 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/C/Users/Hau_hypress/DemoLogin/DemoLogin"
-	],
 	"file_history":
 	[
-		"/C/Users/Hau_hypress/IdeaProjects/oasis-docker/docker-compose.yml",
 		"/C/Users/Hau_hypress/DemoLogin/manage.py",
 		"/C/Users/Hau_hypress/DemoLogin/DemoLogin/settings.py",
+		"/C/Users/Hau_hypress/IdeaProjects/oasis-docker/docker-compose.yml",
 		"/C/Users/Hau_hypress/DemoLogin/DemoLogin/manage.sublime-project",
 		"/D/Web/Web Thực hành 2/script/event.js",
 		"/D/Web/Web Thực hành 2/form.html",
@@ -286,67 +328,64 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "settings.py",
+					"file": "/C/Users/Hau_hypress/Desktop/Web 3/table.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3190,
+						"buffer_size": 2592,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2375,
+								2375
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"auto_name": "",
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 810.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/Hau_hypress/Desktop/Web 3/script.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4,
+								4
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/Hau_hypress/DemoLogin/manage.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 629,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				}
 			]

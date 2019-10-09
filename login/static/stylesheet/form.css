@@ -6,8 +6,6 @@ body {
 	left: 50%;
     top: 40%;
     position: absolute;
-    margin-left: -205px;
-    margin-top: -120px;
 }
 
 input[type = text], input[type = email], input[type = password] {
@@ -20,7 +18,7 @@ input[type = text], input[type = email], input[type = password] {
 
 label.name {
 	display: inline-block;
-  width: 120px;
+    width: 120px;
 }
 
 input[type = text], input[type = email], input[type = password] {
@@ -45,11 +43,11 @@ input[type = text].required, input[type = email].required, input[type = password
 	background-color: #00ffff;
 }
 
-input[type = button], input[type = checkbox], input[type = radio] {
+input[type = button], input[type = checkbox], input[type = radio],input[type = submit] {
 	cursor: pointer;
 }
 
-input[type = button] {
+input[type = button], input[type = submit] {
 	background: #2196F3;
 	border: 1px solid #2196F3;
 	padding: 10px;
@@ -187,11 +185,11 @@ input[type = button] {
 	background: white;
 }
 
-input[type = button]:hover {
+input[type = button]:hover, input[type = submit]:hover {
 	background: #007cde;
 }
 
-input[type = button]:focus, input[type = text]:focus, input[type = email]:focus, input[type = password]:focus, textarea:focus {
+input[type = button]:focus, input[type = text]:focus, input[type = email]:focus, input[type = password]:focus, input[type = submit]:focus, textarea:focus {
 	outline: none;
 }
 
