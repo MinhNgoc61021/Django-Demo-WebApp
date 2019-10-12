@@ -1,0 +1,11 @@
+{% extends 'home/base.html' %}
+{% block title %}Home{% endblock %}
+    {% block content %}
+        {% if user.is_authenticated %}
+            <p>Hi, {{ user.username }}!</p>
+            <a href="{% url 'logout' %}"><button type="submit" style="cursor: pointer;" class="save btn btn-outline-success">Log Out</button></a>
+        {% else %}
+            <p>You are not logged in</p>
+            <a href="{% url 'login' %}"><button type="submit" style="cursor: pointer;" class="save btn btn-outline-success">Log In</button></a>
+        {% endif %}
+    {% endblock %}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User log in</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'stylesheet/bootstrap.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'stylesheet/login_style.css' %} ">
+</head>
+<body>
+    <div id="container">
+        <h3>Register Form</h3>
+        <form method="POST" action="{% url 'login' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="username-input">Username</label>
+                <input type="text" id="username-input" class="form-control" name="username" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            <br>
+            <label for="password-input">Password</label>
+                <input type="password" id="password-input" class="form-control" name="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+                        <a href="javascript:void(0)" class="reset-password" style="display:block; float: right">Forgotten Password</a>
+            <br>
+            <button type="submit" style="display: inline-block" class="save btn btn-outline-success">Log In</button>
+            <a href="/info"><button type="button" style="display: inline-block; float: right;" class="save btn btn-outline-info">About</button></a>
+            <br>
+        </form>
+    </div>
+</body>
+</html>
